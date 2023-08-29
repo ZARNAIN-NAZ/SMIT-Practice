@@ -89,10 +89,62 @@
 //             break;}
 // }
 
-function example(){
-    console.log(count1);
-    console.log(count2);
-    var count1=2;
-   let  count2 = 4;
-}
-example()
+// function example(){
+//     console.log(count1);
+//     console.log(count2);
+//     var count1=2;
+//    let  count2 = 4;
+// }
+// example()
+
+//IIFE (intermediate invoked funcitons expressoin)
+// (
+//     function(){
+//         let msg = "hello IIFE"
+//         console.log(msg);
+
+//     }
+// )();
+
+
+// memoization
+// const memoizationVar =()=>{
+//     let cache ={}
+//     return(value)=>{
+//         if(value in cache){
+//             console.log("fetching from cache");
+//             return cache[value]
+//         }
+//         else{
+//             console.log("calculating result");
+//             let result = value +20;
+//             cache[value]=result
+//             return result
+//         }
+//     }
+// }
+// const add = memoizationVar()
+// console.log(add(20));
+// console.log(add(20));
+
+//hoisting
+// console.log(msg);
+// var msg= "hello" //undefined
+
+// var msg;
+// console.log(msg);
+// msg='i am msg' //undefined
+
+//classes in es6
+// class Bike{
+//     constructor(model , color){
+//         this.model = model ;
+//         this.color= color;
+//     }
+//     getDetails(){
+//         return this.model +'bike has ' +this.color +'color'
+//         } 
+// }
+
+
+

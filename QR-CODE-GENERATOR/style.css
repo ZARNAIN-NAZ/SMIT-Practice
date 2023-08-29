@@ -1,0 +1,40 @@
+body{
+    background-color: black;
+  margin: auto;
+    padding: 30%;
+    margin-bottom: 50px;
+   /* align-items: center;
+   justify-content: center; */
+}
+.container{
+    background-color: rgb(147, 196, 147);
+    /* padding: 50px;
+    padding-bottom: 100%;
+    margin:40px; */
+}
+button{
+    background-color: red;
+}
+h2{
+    
+}
+.error{
+    animation: shake 0.1s linear 10 ;
+}
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-20);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(2);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
