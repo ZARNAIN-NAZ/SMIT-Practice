@@ -146,5 +146,161 @@
 //         } 
 // }
 
+// -------------------------------------------------------------------------------------------------
+// function statement---------------------------------------------------
+// function abc(){
+//     console.log("hello");
+// }
+// abc();
+
+//functon expression also knwn as func declaration
+// var xyz = function(){
+//     console.log("function expression");
+// }
+// xyz()
+
+//the diff b/w func statement and expression is hoisting
+
+// hoisting
+// console.log(a); //undefined
+// var a=0; //variable gives undefined calling before initializing
+
+// abc();
+// function abc(){
+//     console.log('its running '); //functions will run defore initialization
+// }
+
+// abc();
+// var abc = function (){
+//     console.log('its not  running (funct hoisting is not allowed)'); //functions will run defore initialization
+// } //bcz this function save as variables
+
+//anonymous fucntion
+// 01// (function(){
+//     console.log("hello anonymous function");
+// }())
+
+// 02// (function(a,b){
+//     console.log(`self invoking funciton(hoisitng is not allowed bcz thers no any name of function ${a+b} "thers no need to call it bcz we dont have any name to call it so its call by its self" `);
+// }(1,2))
+
+// 03// (function(a,b,c){
+//     console.log(`sum is ${a+b+c}`);
+// })(1,2,2)
+
+//named functions expression----------------------------------------------------
+// let anyfunc = function abc(a,b){
+//     console.log(a+b);
+// }
+// anyfunc(2,3);//5
+// abc(3,4)//error (always call with var name not by function name)
+
+//ARROW FUNCTION-------------------------------------
+// let arrfunc = ()=>{ //this ()round bracket use as a parameters
+
+// }
+// arrfunc()//this  ()use as an argument
+
+// //higher order function //(dont repeat yourself (dry))
+// function hi(){
+//     console.log("hi");
+// }
+// function higherorder(){ //take func as a parameter so its called hof
+//     return hi() //return function so its called call back func
+// }
+// higherorder()
+
+
+//eg of hof is map 
+// eg :
+// const arr = [1,2,3,4,3,2,]
+// arr ===>every element*2
+// arrayNew ===>every element * 2
+// simple js 
+// function double(){
+// let newarr = []
+// for (let index = 0; index < arr.length; index++) {
+//     let value= array[index] *2;
+//     newarr.push(value) 
+// }
+// return newarr
+// }
+// console.log(double());
+
+//by using map solve above code
+// map used when we want to modify every element in an array
+//map does double triple binary
+
+// const doubleMagic  = arr.map((index)=>index*2)
+// const  tripleMagic = arr.map((index)=>index*2)
+// console.log(doubleMagic);
+// console.log(tripleMagic);
+
+//2nd eg
+// function doubleValue(index){
+//     return index*2
+// }
+// const doubleMagic = arr.map((index)=>doubleValue(index))
+// console.log(doubleMagic);
+
+// const binary = arr.map((index)=>index.toString(2))
+// console.log(binary);
+
+
+//filter
+// let arrr = [2,4,34,2,4,3,5]
+
+// function even(){
+//     let  newArr =[]
+//     for (let i = 0; index < arrr.length; i++) {
+// if(arrr[i]%2 ==0)        
+// newArr.push(arrr[i])
+//     }
+// }
+// return newArr;
+// console.log(even());
+// }
+
+
+// const even  =arrr.filter((index)=>{
+//     return index%2 ===0
+// })
+
+//reduce ----------------------
+//doesnt return array , returns a single value(sum , min , max) 
+// let arr=[1,2,3,4]
+// function sum(){
+//     let sum =0;
+//     for (let i = 0; i < arr.length; i++) {
+//        sum+=arr[i]
+        
+//     }
+//     return sum
+// }
+// console.log(add());
+
+//map---chnge every element
+//filter--  base on your  condition
+//reduce -- give single value (take 2 parameters)
+
+// const addition = arr.reduce((index,sum)=>{
+// return (sum = sum+index)
+// console.log(addition);
+
+// },0) // sum's 1st val is 0
+
+
+//template literals with array
+let arr = [3,34,342,24]
+// const add = arr.reduce((index , sum)=>{
+//     return (sum = )
+const add = arr.filter((index)=>{
+return index %2 !=0;
+})
+console.log();
+
+
+
+
 
 
