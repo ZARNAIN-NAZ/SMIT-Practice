@@ -146,6 +146,38 @@
 //         } 
 // }
 
+//closures-----------
+// function welcome(name){
+//     var greet = function(msg){
+//         console.log(msg ,"", name);
+//     }
+//     return greet
+// }
+// var myfunc = welcome('john')
+// myfunc('welcome');
+// myfunc('hello mr.')
+
+//practice of closures
+// function frstcall(name){
+//     let myvar = (msg)=>{
+//         console.log(msg ,name);
+//     }
+//     return myvar
+// }
+// let myfunc = frstcall("zarnain")
+// myfunc("welcome")
+// myfunc("i am miss,")
+
+
+
+
+
+
+
+
+
+
+
 // -------------------------------------------------------------------------------------------------
 // function statement---------------------------------------------------
 // function abc(){
