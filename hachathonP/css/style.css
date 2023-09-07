@@ -54,6 +54,7 @@ position: absolute;
 width: 100%;
 height: inherit;
 opacity: 0.15;
+border-radius: 12px;
 
   }
 .content-left{
@@ -81,7 +82,7 @@ display: flex;
 
 .home-articles{
 padding: 18px;
-  background-color: rgb(245, 224, 224);
+  background-color: rgb(248, 239, 239 , 0.5);
 margin-top: 23px;
 }
 .home-article{
@@ -94,6 +95,10 @@ margin-top: 23px;
 .home-article-content{
   align-self: center;
   padding: 25px;
+}
+.home-article-content a{
+  text-decoration: none;
+  color: black;
 }
 .footer {
   height: 50px;
