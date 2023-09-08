@@ -168,6 +168,25 @@
 // myfunc("welcome")
 // myfunc("i am miss,")
 
+// ------------promise-------
+// const waada = new Promise(resolve =>{
+//     setTimeout(()=>{
+//         resolve("I AM A PROMISE")
+//     } , 5000)
+// } , reject =>{
+// })
+// waada.then(value => console.log(value))
+
+
+let almir  = new Promise((resolve , reject)=>{
+    let val  = 23;
+    setTimeout(()=>{
+        resolve(val)
+    },1000)
+} , reject=>{
+console.log("i am rejected");
+})
+almir.catch(val=> console.log(val))
 
 
 

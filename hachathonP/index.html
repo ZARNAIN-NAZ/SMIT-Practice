@@ -13,12 +13,19 @@
         <span>iBlog</span>
         <ul>
           <li><a href="/"> Home</a></li>
-          <li><a href="/contact"> Contact</a></li>
+          <li><a href="/contact.html"> Contact</a></li>
         </ul>
       </div>
       <div class="nav-right">
-        <input class="form-input" type="text" placeholder="Article search" />
-        <button class="btn">Search</button>
+        <form action="./search.html" method="get">
+          <input
+            class="form-input"
+            type="text"
+            name="query"
+            placeholder="Article search"
+          />
+          <button class="btn">Search</button>
+        </form>
       </div>
     </nav>
     <div class="max-width-1 m-auto">
@@ -45,7 +52,6 @@
     <div class="max-width-1 m-auto"><hr /></div>
     <div class="home-articles max-width-1 m-auto font2">
       <h2>Featured Articles</h2>
-   
 
       <div class="home-article">
         <div class="home-article-img">
@@ -137,7 +143,6 @@
         </div>
       </div>
 
-
       <div class="home-article">
         <div class="home-article-img">
           <img src="img/11.svg" alt="article" />
@@ -152,7 +157,6 @@
           <span>07 January | 6 min read</span>
         </div>
       </div>
-    
 
       <div class="home-article">
         <div class="home-article-img">
