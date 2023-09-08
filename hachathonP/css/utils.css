@@ -50,3 +50,10 @@
   margin: 1 13px;
   font-family: var(--font1);
 }
+
+.form-box input ,textarea{
+width: 52vw;
+padding: 10px 6px;
+margin: 7px 0;
+
+}
