@@ -15,7 +15,7 @@
 <body  class="d-flex justify-content-center p-5">
     <div class="card">
         <div class="card-header">
-            <h3>Log In</h3>
+            <h3>Log Out</h3>
         </div>
         
         <input type="email" id="email" class="input-box" placeholder="enter your email" required>
@@ -24,8 +24,7 @@
         <br>
  
         <div class="button">
-           <center><button type="submit" id="Login" class="signup-button" name="Login" value="Login">Login</button></center> 
-           <center><button type="submit" id="signUp" class="signup-button" name="Login" value="Sign up" >Sign Up</button></center> 
+           <center><button type="submit" id="Logout" class="signup-button" name="Login" value="Login">Logout</button></center> 
 
         </div>
     </form>
@@ -37,7 +36,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
 import { getDatabase, set, ref ,update } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword ,onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";;
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword ,signOut} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";;
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -59,22 +58,11 @@ const analytics = getAnalytics(app);
 const database  = getDatabase(app)
 const auth = getAuth();
 
-Login.addEventListener('click' , (e)=>{
-    let email  = document.getElementById('email').value
+Logout.addEventListener('click' , (e)=>{
 
-let password  = document.getElementById('password').value
-
-signInWithEmailAndPassword(auth , email, password)
-.then((userCredential)=>{
-    //signin
-    const user  = userCredential.user;
-    const dt = new Date();
-    //...
-    update(ref(database ,'users/' + user.id),{
-        last_login:dt,
-    })
-    alert("User Logged In Successfully!")
-    location.replace('copy.html')
+    signOut(auth).then(()=>{
+    alert("User Logged Out!")
+    location.replace("login.html")
 })
 
 .catch((error) => {
@@ -86,21 +74,7 @@ signInWithEmailAndPassword(auth , email, password)
 
 })
 
-const user  = auth.currentUser;
-onAuthStateChanged(auth,(user)=>{
-    if(user){
-        const uid = user.uid;
-    }
-    else{
-        //user is signed out
-    }
-})
 
-
-signUp.addEventListener('click' , (e)=>{
-    location.replace("index.html")
-    
-})
     </script>
 </body>
 </html>
