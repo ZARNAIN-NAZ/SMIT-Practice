@@ -1,0 +1,98 @@
+body{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.navbar{
+    color: rgb(48, 37, 37);
+    background-color: rgb(23, 103, 92);
+   height: 50px;
+   width: 100%;
+    display: flex;
+top: 0px;
+}
+.unordered-list{
+  display: flex;
+}
+.unordered-list:hover{
+  cursor: pointer;
+}
+.list{
+list-style: none;
+font-size: large;
+margin: 15px;
+
+}
+.list:hover{
+  cursor: pointer;
+  color: white;
+  font-style: bold;
+  font-size: 23px;
+}
+.signup-button{
+  float: right;
+  padding-left:23px ;
+  padding-right:23px ;
+  margin-left: 900px;
+width: 80px;
+height: 35px;
+margin-top: 10px;
+  color: rgb(255, 255, 255);
+  background-color: lightgreen;
+  border: 3px solid black;
+  border-radius: 29px;
+}
+.signup-button:hover{
+  cursor: pointer;
+  background-color: grey;
+}
+#enterDetails{
+  width: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: auto;
+font-display: row;
+flex-wrap: wrap;
+
+}
+input{
+  width: 120px;
+ 
+}
+#title{
+  width: 600px;
+  padding: 10px;
+  margin: 23px;
+  display: flex;
+  border: 3px solid black;
+  border-radius: 5px;
+  font-weight: bolder;
+  font-size: 23px;
+}
+#enterpost
+{
+  border: 3px solid black;
+  border-radius: 5px;
+  font-style: italic;
+  padding: 5px;
+font-size: 18px;
+}
+.user-profile{
+  width: 90px;
+/* float: right;
+padding-left: 90px; */
+}
+.buttonclass{
+  padding: 5px 28px;
+margin: 40px 5px;
+width: 90px;
+border: 2px solid black;
+border-radius: 10px;
+height: 30px;
+color: rgb(27, 1, 1);
+}
+.buttonclass:hover{
+  cursor: pointer;
+  background-color: greenyellow;
+}
