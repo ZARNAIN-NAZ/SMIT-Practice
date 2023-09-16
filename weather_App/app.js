@@ -1,8 +1,10 @@
-let getWeather = function(){
+window.getWeather = function(){
 
 let cityName = document.querySelector("#cityName").value;
 let API_KEY = '4757a065b000a311c75b1c890bc4bbee';
-axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY }`)
+// axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY }`)
+axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=metric`)
+
   .then(function (response) {
     // handle success
     console.log(response.data);
