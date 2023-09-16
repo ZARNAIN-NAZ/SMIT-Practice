@@ -7,22 +7,26 @@
     <title>Document</title>
 </head>
 <body>
-    <h2 class="heading">Weather App</h2>
-    <form onsubmit="getWeather()" return false>
-        <label for="cityName">city Name:</label>
-        <input type="text" id="cityName" name="cityName" placeholder="enter your city name">
-        <br>
-<button type="submit">Get Weather</button>
-
-        
-
-    </form>
-<div id="result"></div>
-
-    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <div class="container">
+        <h1 class="heading">Weather App</h1>
 
 
-    <script  src="app.js"></script>
+        <form onsubmit="getWeather();
+        return false"
+        >
+           <label  id="cityName for="cityName">City Name:</label>
+           <input type="text" id="cityName" name="cityName" placeholder="enter your city name">
+           <br> <br>
+   <button  class="btn" ="submit">Get Weather</button>
+   
+           
+   
+       </form>
+   <div id="result"></div> 
+
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="app.js"></script>
+
 </body>
 </html>

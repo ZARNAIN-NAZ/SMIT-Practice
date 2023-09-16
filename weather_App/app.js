@@ -8,7 +8,9 @@ axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=$
   .then(function (response) {
     // handle success
     console.log(response.data);
-    document.querySelector('#result').innerHTML='weather data successfully retrieve:)'
+    // document.querySelector('#result').innerHTML=`current temprature of ${response.data.name} is ${response.data.main.temp} °C `
+    document.querySelector("#result").innerHTML = `current temprature of ${response.data.name} is ${response.data.main.temp}°C`
+
 
   })
   .catch(function (error) {
