@@ -8,32 +8,39 @@
   <body>
     <h1>async await</h1>
     <script>
-    //   let axios = (url, body) => {
-        let axios = () => {
+      //   let axios = (url, body) => {
+      let axios = () => {
         return new Promise((resolve, reject) => {
           setTimeout(() => {
             resolve("response data");
           }, 3000);
         });
       };
-   
+      let apicall = async () => {
+
       let a = 6;
       if (a === 9) {
         console.log("hello");
       }
       console.log("first");
+    //   let apicall = async () => {
+        let data = await axios("https://abc.com/api/profile", {});
 
-      let data =  async ()=>{
-        axios("https://abc.com/api/profile", {})
-      } //axios("https://abc.com/api/profile", {})
-        // .then((data) => {
-        //   // console.log("third");
-        //   setTimeout(() => {
-        //     console.log("try");
-        //   }, 4000);
-        // })
-        // .catch((error) => {});
-      console.log("second");
+        console.log("data", data);
+        console.log("second");
+
+      };
+      apicall()
+
+      //axios("https://abc.com/api/profile", {})
+      // .then((data) => {
+      //   // console.log("third");
+      //   setTimeout(() => {
+      //     console.log("try");
+      //   }, 4000);
+      // })
+      // .catch((error) => {});
+    //   console.log("second");
     </script>
   </body>
 </html>
